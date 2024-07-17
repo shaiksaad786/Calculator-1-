@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIRD PAGE</title>
+    <style>
+        html, body{
+            height: 100%;
+            margin: 0;
+            background-color: black;
+        }
+        .d1{
+            display: flex;
+            justify-content: center;
+            }
+        h1{
+            align-items: center;
+            border: 2px solid yellow;
+            padding: 15px;
+            font-size:150%;
+            color: white;
+            margin-top: 50px;
+        }
+        p{
+            color:white;
+        }
+        .d2{
+            display: flex;
+            justify-content: center;
+            font-size: 150%;
+            margin-top: 200px;
+        }
+        .b{
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-left: 20%;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="d1">
+    <h1> 
+        Hi <b class="name"></b> how are you? Hope you are doing well in your life
+    </h1>
+    </div>
+    <div class="d2">
+        <p>
+            Do you want to use SAAD's CALCULATOR.
+        </p>
+    </div>
+    <div class="b">
+        <button type="button" onclick="window.location.href = 'Index.html'">YES</button>
+
+        <button type="button" onclick="window.close()">NO</button>
+    </div>
+    <script>
+        window.onload = function() {
+            // Retrieve input value from sessionStorage
+            let input = sessionStorage.getItem('inputValue');
+            
+            // Get the element with the "name" class
+            let nameElement = document.querySelector('.name');
+            
+            // Set the text content of the element
+            nameElement.textContent = input;
+        };
+    </script>
+</body>
+</html>
